@@ -15,7 +15,7 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "monospace:size=10", "Material Design Icons:pixelsize=10:antialias=true:autohint=true","JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static char *fonts[]          = { "monospace:size=10", "Material Design Icons:pixelsize=14:antialias=true:autohint=true","JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#004400";
 static char normfgcolor[]           = "#bbbbbb";
@@ -171,6 +171,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
+	{ MODKEY|ShiftMask,		XK_d,		spawn,          SHCMD("via") },
+	{ MODKEY|ShiftMask,		XK_period,	spawn,          SHCMD("todo") },
 	/* { MODKEY,			XK_d,		spawn,		SHCMD("") } }, */
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
