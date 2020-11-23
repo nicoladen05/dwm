@@ -154,6 +154,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_q,		killclient,	{0} },
 	{ MODKEY|ShiftMask,		XK_q,		quit,   	{0} },
+	{ MODKEY,			XK_Escape,	spawn,		SHCMD("i3lock-fancy") },
 	{ MODKEY,			XK_w,		spawn,		SHCMD("brave") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
@@ -208,6 +209,9 @@ static Key keys[] = {
 	/* { MODKEY,			XK_F12,		xrdb,		{.v = NULL } }, */
 	{ MODKEY,			XK_space,	zoom,		{0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
+
+	{ 0,				XK_Print, 	spawn,		SHCMD("maim screenshot-$(date '+%y%m%d-%H%M-%S').png") },
+	{ MODKEY,			XK_Print, 	spawn,		SHCMD("maimpick") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
